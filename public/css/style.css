@@ -94,6 +94,13 @@ body{
     border: none !important;
 }
 
+/* edit page */
+.edit-btn{
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+
 /* show page */
 .show-img {
     height: 30vh;
@@ -103,10 +110,6 @@ body{
     display: flex;
 }
 
-.edit-btn{
-    background-color: #fe424d !important;
-    border: none !important;
-}
 
 .show-card {
     padding-left: 0;
