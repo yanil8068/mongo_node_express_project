@@ -36,7 +36,7 @@
   <div class="col-8 offset-3 mb-3">
     <hr />
     <h4>Leave a Review</h4>
-    <form>
+    <form action="/listings/<%= listing.id %>/reviews" method="POST">
       <div class="mb-3 mt-3">
         <label for="rating" class="form-label">Rating</label>
         <input
@@ -58,7 +58,7 @@
           class="form-control"
         ></textarea>
       </div>
-      <button class="btn btn-outline-dark">Submit</button>
+      <button type="submit" class="btn btn-outline-dark">Submit</button>
     </form>
   </div>
 </div>
