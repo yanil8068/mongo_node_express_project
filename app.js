@@ -55,8 +55,8 @@ const validateListing = (req, res, next) => {
   let { error } = listingSchema.validate(req.body);
 
   if (error) {
-    let errMsg = error.details.map((el) => el.message).join(",");
-    throw new ExpressError(400, errMsg);
+    // let errMsg = error.details.map((el) => el.message).join(",");
+    throw new ExpressError(400, error);
   } else {
     next();
   }
@@ -78,7 +78,7 @@ app.post(
   "/listings",
   validateListing,
   wrapAsync(async (req, res, next) => {
-    let { title, description, image, price, country, location } = req.body;
+    // let { title, description, image, price, country, location } = req.body;
     const newListing = new Listing(req.body.listing);
     await newListing.save();
     res.redirect("/listings");
@@ -112,10 +112,10 @@ app.put(
   validateListing,
   wrapAsync(async (req, res) => {
     let { id } = req.params;
-    const something = await Listing.findByIdAndUpdate(id, {
+    await Listing.findByIdAndUpdate(id, {
       ...req.body.listing,
     });
-    console.log(something);
+
     res.redirect(`/listings/${id}`);
   })
 );
