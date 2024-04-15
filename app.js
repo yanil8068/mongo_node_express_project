@@ -144,7 +144,8 @@ app.post(
     await newReview.save();
     await listing.save();
     console.log("new review saved");
-    res.send("new review saved");
+    // res.send("new review saved");
+    res.redirect(`/listings/${listing._id}`);
   })
 );
 //delete review Route
