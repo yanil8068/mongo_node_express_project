@@ -12,12 +12,19 @@ const { listingSchema, reviewSchema } = require("./schema.js");
 const Review = require("./models/review.js");
 const reviews = require("./routes/review.js");
 const listings = require("./routes/listing.js");
+const session = require("express-session");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname, "/public")));
+const sessionOptions = {
+  secret: "mysupersecretcode",
+  resave: false,
+  saveUninitialized: true,
+};
+app.use(session(sessionOptions));
 
 app.use("/listings", listings);
 app.use("/listings/:id/reviews", reviews);
