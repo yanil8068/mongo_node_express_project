@@ -13,6 +13,7 @@ const Review = require("./models/review.js");
 const reviews = require("./routes/review.js");
 const listings = require("./routes/listing.js");
 const session = require("express-session");
+const flash = require("connect-flash");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -30,6 +31,12 @@ const sessionOptions = {
   },
 };
 app.use(session(sessionOptions));
+app.use(flash());
+
+app.use((req, res, next) => {
+  res.locals.success = req.flash("success");
+  next();
+});
 
 app.use("/listings", listings);
 app.use("/listings/:id/reviews", reviews);
