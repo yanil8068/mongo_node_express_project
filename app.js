@@ -85,12 +85,12 @@ async function main() {
   await mongoose.connect(MONGO_URL);
 }
 
-app.get(
-  "/",
-  wrapAsync((req, res) => {
-    res.send("Hi, i am root");
-  })
-);
+// app.get(
+//   "/",
+//   wrapAsync((req, res) => {
+//     res.send("Hi, i am root");
+//   })
+// );
 
 // app.get("/testListing", async (req, res)=>{
 //     let sampleListing = new Listing({
