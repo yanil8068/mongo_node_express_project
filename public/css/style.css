@@ -119,3 +119,9 @@ body {
   /* border: none !important; */
   margin-bottom: 2rem;
 }
+
+/* map */
+#map {
+  height: 400px;
+  width: 80vh;
+}
