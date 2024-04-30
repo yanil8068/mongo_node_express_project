@@ -25,6 +25,9 @@ router
 //New Route
 router.get("/new", isLoggedIn, listingController.renderNewForm);
 
+//search filter route
+router.get("/filtered", listingController.filteredListings);
+
 //combined show route , update route, delete route
 router
   .route("/:id")

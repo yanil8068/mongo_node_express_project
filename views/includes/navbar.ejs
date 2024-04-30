@@ -43,18 +43,24 @@
       <a class="nav-item nav-link" href="/listings">Explore</a>
     </div>
 
-    <!-- <div class="navbar-nav ms-auto">
-      <form role="search" class="d-flex">
+    <div class="navbar-nav ms-auto">
+      <form
+        method="get"
+        action="/listings/filtered"
+        role="search"
+        class="d-flex"
+      >
         <input
           type="search"
           class="form-control me-2 Search-inp"
           placeholder="Search destinations"
+          name="search-query"
         />
         <button class="btn search-btn" type="submit">
           <i class="fa-solid fa-magnifying-glass"></i>Search
         </button>
       </form>
-    </div> -->
+    </div>
 
     <div class="navbar-nav ms-auto">
       <a class="nav-item nav-link" href="/listings/new">Airbnb your home</a>

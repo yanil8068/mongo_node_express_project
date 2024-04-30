@@ -85,3 +85,12 @@ module.exports.destroyListing = async (req, res) => {
   req.flash("success", "Listing Deleted!");
   res.redirect("/listings");
 };
+
+module.exports.filteredListings = async (req, res) => {
+  const searchQuery = req.query["search-query"];
+  const filteredListings = await Listing.find({
+    title: { $regex: searchQuery, $options: "i" }, //regex operator of mongodb
+  });
+
+  res.render("listings/filtered.ejs", { filteredListings });
+};
