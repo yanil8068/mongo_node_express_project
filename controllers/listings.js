@@ -94,3 +94,12 @@ module.exports.filteredListings = async (req, res) => {
 
   res.render("listings/filtered.ejs", { filteredListings });
 };
+
+module.exports.typeOfStayFilter = async (req, res) => {
+  const filterby = req.query["filt"];
+  const filteredListings = await Listing.find({
+    filt: { $regex: filterby, $options: "i" }, //regex operator of mongodb
+  });
+
+  res.render("listings/filtered.ejs", { filteredListings });
+};

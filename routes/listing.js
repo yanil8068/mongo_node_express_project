@@ -28,6 +28,9 @@ router.get("/new", isLoggedIn, listingController.renderNewForm);
 //search filter route
 router.get("/filtered", listingController.filteredListings);
 
+//filter typeOfStay
+router.get("/typeOfStay", listingController.typeOfStayFilter);
+
 //combined show route , update route, delete route
 router
   .route("/:id")
