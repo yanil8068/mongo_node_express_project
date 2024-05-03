@@ -20,6 +20,20 @@ Mapbox, Passport.js, multer, Cloudinary, cookie-parser, connect-flash, ejs-mate 
 - Implements geocoding and MongoDB session storage for enhanced functionality.
 - Deployed on Render for accessibility.
 
+## Documentation
+
+--Frontend: I had used Ejs package for frontend pages. In it I had used Bootstrap, Css and Javascript as Well.
+
+--Validation: I had used middlewares for backend validation and also applied frontend validation in all the forms .
+
+--Backend: I had used Nodejs, and Express.js for backend.
+
+--Database : I had used MongoDB Atlas for database and mongoose for object modelling .
+
+--Image upload and Map : For image upload functionality i had used multer package and Cloudinary and for map functionality i had used mapbox .
+
+--Other functionality : MVC Framework is implemented , connect-flash is used for all flash messages , deployed on render.
+
 ## Screenshots
 
 ![Home](./ImageForReadme/HomePage.png)
