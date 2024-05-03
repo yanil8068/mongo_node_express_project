@@ -24,14 +24,48 @@
   .end-link {
     margin-right: 10px;
   }
+  .smallSizedDropdown {
+    display: none;
+  }
+  .navToHideWhenSmall {
+    display: block;
+  }
+
+  @media screen and (max-width: 770px) {
+    .smallSizedDropdown {
+      display: block;
+      margin-right: 10px;
+    }
+    .navToHideWhenSmall {
+      display: none;
+    }
+  }
 </style>
 
 <nav
   class="navbar navbar-expand-md navbar-light bg-body-light border-bottom sticky-top"
 >
-  <a class="navbar-brand" href="/"><i class="fa-regular fa-compass"></i></a>
+  <a class="navbar-brand" href="/listings"
+    ><i class="fa-regular fa-compass"></i
+  ></a>
+  <div class="dropdown smallSizedDropdown">
+    <button
+      class="btn btn-secondary"
+      type="button"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div>
+
   <button
-    class="navbar-toggler"
+    class="navbar-toggler navToHideWhenSmall"
     type="button"
     data-toggle="collapse"
     data-target="#navbarNavAltMarkup"
