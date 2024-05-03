@@ -37,10 +37,9 @@ Mapbox, Passport.js, multer, Cloudinary, cookie-parser, connect-flash, ejs-mate 
 ## Screenshots
 
 ![Home](./ImageForReadme/HomePage.png)
-![CreateListingPage](./ImageForReadme/CreateListingPage.png)
+![CreateListingPage](./ImageForReadme/CreateNewListingPage.png)
 ![ShowListingPage](./ImageForReadme/ShowListingPage.png)
 ![MapInShowListingPage](./ImageForReadme/MapInShowListingPage.png)
 ![EditListingPage](./ImageForReadme/EditListingPage.png)
 ![LoginPage](./ImageForReadme/LoginPage.png)
 ![SignUpPage](./ImageForReadme/SignUpPage.png)
-![Result](./ImageForReadme/Result.png)
