@@ -11,12 +11,14 @@ Deployed link : https://major-project-3liz.onrender.com/listings
 MongoDB, Express.js, Node.js, Mongoose, Bootstrap, EJS Template,
 Mapbox, Passport.js, multer, Cloudinary, cookie-parser, connect-flash, ejs-mate .
 
-## Explanation :
+## Features
 
--New Home listing can be created, updated, deleted and shown.
--Authentication, Authorization, Image upload, use of map functionality are also added.
--Middlewares, Error Handling, Validations, MVC Framework, Geocoding, MongoDB session storage are also implemented.
--Deployed on Render
+- New home listings can be created, updated, deleted, and showcased.
+- Implements authentication and authorization for secure access.
+- Facilitates image uploads and incorporates map functionality.
+- Utilizes middlewares, error handling, validations, and follows the MVC framework for robustness.
+- Implements geocoding and MongoDB session storage for enhanced functionality.
+- Deployed on Render for accessibility.
 
 ## Screenshots
 
