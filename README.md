@@ -9,7 +9,7 @@ Deployed link : https://major-project-3liz.onrender.com/listings
 ## Tech Stack
 
 MongoDB, Express.js, Node.js, Mongoose, Bootstrap, EJS Template,
-Mapbox, Passport.js, multer, Cloudinary, cookie-parser, connect-flash, ejs-mate .
+Mapbox, Passport.js, Multer, Cloudinary, Cookie-parser, Connect-flash, Ejs-mate .
 
 ## Features
 
