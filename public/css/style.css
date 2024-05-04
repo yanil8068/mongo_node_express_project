@@ -125,3 +125,10 @@ body {
   height: 400px;
   width: 80vh;
 }
+
+@media screen and (max-width: 770px) {
+  #map {
+    height: 50vh;
+    width: 50vw;
+  }
+}

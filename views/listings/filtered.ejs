@@ -35,6 +35,18 @@
     display: flex;
     align-items: center;
   }
+  .SmallBtnForFilter {
+    display: none;
+  }
+
+  @media screen and (max-width: 770px) {
+    .SmallBtnForFilter {
+      display: inline;
+    }
+    #filters {
+      display: none;
+    }
+  }
 </style>
 <body>
   <!-- <h3>All Listings</h3> -->
@@ -111,6 +123,97 @@
       </div>
     </div>
   </div>
+
+  <!-- small screen filter -->
+  <div class="dropdown SmallBtnForFilter">
+    <button
+      class="btn btn-secondary SmallBtn"
+      type="button"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Filter <i class="fa-solid fa-arrow-up-wide-short"></i>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-start">
+      <li>
+        <div class="filter">
+          <a href="/listings/typeOfStay?filt=Trending">
+            <div>
+              <i class="fa-solid fa-fire"></i>
+            </div>
+            <p>Trending</p>
+          </a>
+        </div>
+      </li>
+      <li>
+        <div class="filter">
+          <a href="/listings/typeOfStay?filt=Rooms">
+            <div><i class="fa-solid fa-bed"></i></div>
+            <p>Rooms</p>
+          </a>
+        </div>
+      </li>
+
+      <li>
+        <div class="filter">
+          <a href="/listings/typeOfStay?filt=Iconiccities">
+            <div><i class="fa-solid fa-mountain-city"></i></div>
+            <p>Iconiccities</p>
+          </a>
+        </div>
+      </li>
+      <li>
+        <div class="filter">
+          <a href="/listings/typeOfStay?filt=Mountains">
+            <div><i class="fa-solid fa-mountain"></i></div>
+            <p>Mountains</p>
+          </a>
+        </div>
+      </li>
+
+      <li>
+        <div class="filter">
+          <a href="/listings/typeOfStay?filt=Castles">
+            <div><i class="fa-brands fa-fort-awesome"></i></div>
+            <p>Castles</p>
+          </a>
+        </div>
+      </li>
+      <li>
+        <div class="filter">
+          <a href="/listings/typeOfStay?filt=Pools">
+            <div><i class="fa-solid fa-person-swimming"></i></div>
+            <p>Pools</p>
+          </a>
+        </div>
+      </li>
+      <li>
+        <div class="filter">
+          <a href="/listings/typeOfStay?filt=Camping">
+            <div><i class="fa-solid fa-campground"></i></div>
+            <p>Camping</p>
+          </a>
+        </div>
+      </li>
+      <li>
+        <div class="filter">
+          <a href="/listings/typeOfStay?filt=Farms">
+            <div><i class="fa-solid fa-cow"></i></div>
+            <p>Farms</p>
+          </a>
+        </div>
+      </li>
+      <li>
+        <div class="filter">
+          <a href="/listings/typeOfStay?filt=Arctic">
+            <div><i class="fa-regular fa-snowflake"></i></div>
+            <p>Arctic</p>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!-- small screen filter -->
 
   <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
     <% for(let listing of filteredListings) { %>

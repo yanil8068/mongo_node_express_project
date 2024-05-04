@@ -24,20 +24,35 @@
   .end-link {
     margin-right: 10px;
   }
-  .smallSizedDropdown {
+  /* .smallSizedDropdown {
     display: none;
-  }
+  } */
   .navToHideWhenSmall {
     display: block;
   }
+  .SmallBtn {
+    background-color: #fe424d !important;
+    border-color: #fe424d !important;
+    display: none;
+  }
+  .SmallExplore {
+    display: none;
+    text-decoration: none;
+    color: black;
+  }
+  .SmallScreenDropDown {
+    width: 200px;
+  }
 
   @media screen and (max-width: 770px) {
-    .smallSizedDropdown {
-      display: block;
-      margin-right: 10px;
-    }
     .navToHideWhenSmall {
       display: none;
+    }
+    .SmallBtn {
+      display: inline;
+    }
+    .SmallExplore {
+      display: inline;
     }
   }
 </style>
@@ -46,21 +61,54 @@
   class="navbar navbar-expand-md navbar-light bg-body-light border-bottom sticky-top"
 >
   <a class="navbar-brand" href="/listings"
-    ><i class="fa-regular fa-compass"></i
-  ></a>
-  <div class="dropdown smallSizedDropdown">
+    ><i class="fa-regular fa-compass"></i>
+    <a href="/listings" class="SmallExplore">Explore</a>
+  </a>
+  <div style="margin-top: 0rem" class="dropdown bigSizedDropdown">
     <button
-      class="btn btn-secondary"
+      class="btn btn-secondary SmallBtn"
       type="button"
       data-bs-toggle="dropdown"
       aria-expanded="false"
     >
       <i class="fa-solid fa-bars"></i>
     </button>
-    <ul class="dropdown-menu dropdown-menu-end">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <ul class="dropdown-menu dropdown-menu-end SmallScreenDropDown">
+      <li>
+        <div class="ms-auto">
+          <form
+            method="get"
+            action="/listings/filtered"
+            role="search"
+            class="d-flex"
+          >
+            <input
+              type="search"
+              class="form-control me-2"
+              placeholder="Search"
+              name="search-query"
+            />
+            <button class="btn search-btn btn-sm" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+      </li>
+      <li>
+        <a class="dropdown-item" href="/listings/new">Airbnb your home</a>
+      </li>
+      <% if(!currUser){%>
+      <li>
+        <a class="dropdown-item" href="/listings/userRelated/signup">Signup</a>
+      </li>
+      <li>
+        <a class="dropdown-item" href="/listings/userRelated/login">Login</a>
+      </li>
+      <% }%><% if(currUser){%>
+      <li>
+        <a class="dropdown-item" href="/listings/userRelated/logout">Logout</a>
+      </li>
+      <% }%>
     </ul>
   </div>
 
